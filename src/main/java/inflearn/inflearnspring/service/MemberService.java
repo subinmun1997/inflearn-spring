@@ -2,15 +2,22 @@ package inflearn.inflearnspring.service;
 
 import inflearn.inflearnspring.domain.Member;
 import inflearn.inflearnspring.repository.MemberRepository;
-import inflearn.inflearnspring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
 public class MemberService { // ctrl + shift + t
     
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-    
+    private final MemberRepository memberRepository;
+
+
+    public MemberService(MemberRepository memberRepository) { // alt + shift + enter
+        this.memberRepository = memberRepository;
+    }
+
     /*
      * 회원 가입
      */
@@ -20,7 +27,7 @@ public class MemberService { // ctrl + shift + t
         return member.getId();
     }
 
-    private void validateDuplicateMember(Member member) { // 중복 회원 검즞ㅇ
+    private void validateDuplicateMember(Member member) { // 중복 회원 검증
         memberRepository.findByName(member.getName()) // ctrl + alt + m
                 .ifPresent(m -> {
                     throw new IllegalStateException("이미 존재하는 회원입니다.");
