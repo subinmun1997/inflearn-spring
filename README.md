@@ -8,7 +8,7 @@
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-9000D3.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 | 수강 | 강의 | 디렉토리 |
 |:----:|:----:|:--------:|
-| ✅ | 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 | [hello-spring](./hello-spring) |
+| ✅ | 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 | [hello-spring](https://github.com/subinmun1997/inflearn-spring-core) |
 | ✅ | 스프링 핵심 원리 - 기본편 | [core](./core) |
 |  | 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술 |  |
 |  | 스프링 MVC 2편 - 백엔드 웹 개발 활용 기술 |  |
